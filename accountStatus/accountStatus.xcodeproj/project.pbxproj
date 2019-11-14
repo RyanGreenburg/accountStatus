@@ -16,9 +16,10 @@
 		62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC1237CC50E008150F6 /* AccountController.swift */; };
 		62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC8237CCF81008150F6 /* NetworkService.swift */; };
 		62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCA237CD051008150F6 /* AccountRoute.swift */; };
-		62D6DCCD237CDDA4008150F6 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */; };
 		62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */; };
 		62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */; };
+		62D6DCD7237CFAC0008150F6 /* AccountDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */; };
+		62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +34,10 @@
 		62D6DCC1237CC50E008150F6 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		62D6DCC8237CCF81008150F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		62D6DCCA237CD051008150F6 /* AccountRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRoute.swift; sourceTree = "<group>"; };
-		62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
 		62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
 		62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		62D6DCD6237CFAC0008150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = accountStatus/Views/Storyboards/Base.lproj/AccountDetail.storyboard; sourceTree = "<group>"; };
+		62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				62D6DCAE237CC487008150F6 /* Main.storyboard */,
+				62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -125,8 +128,8 @@
 		62D6DCCE237CDDB0008150F6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */,
 				62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */,
+				62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				62D6DCB5237CC488008150F6 /* LaunchScreen.storyboard in Resources */,
 				62D6DCB2237CC488008150F6 /* Assets.xcassets in Resources */,
 				62D6DCB0237CC487008150F6 /* Main.storyboard in Resources */,
+				62D6DCD7237CFAC0008150F6 /* AccountDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,9 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */,
 				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
-				62D6DCCD237CDDA4008150F6 /* AccountTableViewController.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,
 				62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */,
@@ -249,6 +253,14 @@
 				62D6DCB4237CC488008150F6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D6DCD6237CFAC0008150F6 /* Base */,
+			);
+			name = AccountDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

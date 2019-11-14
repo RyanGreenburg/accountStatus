@@ -22,14 +22,18 @@ class AccountListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionView()
+    }
+    
+    // MARK: - Class Methods
+    func configureCollectionView() {
+        accountCollectionView.delegate = self
         let layout = createLayout()
         accountCollectionView.setCollectionViewLayout(layout, animated: false)
         fetchAllAccounts()
         setUpDataSource()
         updateCollectionView(animated: false)
     }
-    
-    // MARK: - Class Methods
     func fetchAllAccounts() {
         AccountController.fetchAccountInfo(for: .allAccounts) { (foundAccounts, error) in
             if let error = error {
@@ -46,6 +50,13 @@ class AccountListViewController: UIViewController {
         DispatchQueue.main.async {
             self.accountCollectionView.reloadData()
         }
+    }
+    
+    func showDetailView(for account: Account) {
+        let storyboard = UIStoryboard(name: "AccountDetail", bundle: nil)
+        guard let viewController = storyboard.instantiateInitialViewController() as? AccountDetailViewController else { return }
+        viewController.account = account
+        self.present(viewController, animated: true)
     }
 }
 
@@ -91,5 +102,15 @@ extension AccountListViewController {
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
         layoutSection.interGroupSpacing = self.view.frame.height / 50
         return layoutSection
+    }
+}
+
+extension AccountListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let dataSource = dataSource,
+            let account = dataSource.itemIdentifier(for: indexPath)
+            else { return }
+        showDetailView(for: account)
     }
 }
