@@ -22,6 +22,8 @@ class AccountListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        let layout = createLayout()
+        accountCollectionView.setCollectionViewLayout(layout, animated: false)
         fetchAllAccounts()
         setUpDataSource()
         updateCollectionView(animated: false)
@@ -64,6 +66,30 @@ extension AccountListViewController {
         snapshot.appendItems(self.accounts.filter({ $0.returnOnInvestment >= 0 }), toSection: .positive)
         snapshot.appendItems(self.accounts.filter({ $0.returnOnInvestment < 0 }), toSection: .negative)
         
+        
         dataSource?.apply(snapshot)
+    }
+    
+    func createLayout() -> UICollectionViewLayout {
+        let section = createSectionLayout()
+        let configuration = UICollectionViewCompositionalLayoutConfiguration()
+        configuration.interSectionSpacing = 20
+        let layout = UICollectionViewCompositionalLayout(section: section, configuration: configuration)
+        return layout
+    }
+    
+    func createSectionLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(self.view.frame.height / 10))
+        
+        let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
+        
+        let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [layoutItem])
+        
+        
+        let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+        layoutSection.interGroupSpacing = self.view.frame.height / 50
+        return layoutSection
     }
 }
