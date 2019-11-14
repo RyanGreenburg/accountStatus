@@ -16,6 +16,9 @@
 		62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC1237CC50E008150F6 /* AccountController.swift */; };
 		62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC8237CCF81008150F6 /* NetworkService.swift */; };
 		62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCA237CD051008150F6 /* AccountRoute.swift */; };
+		62D6DCCD237CDDA4008150F6 /* AccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */; };
+		62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */; };
+		62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		62D6DCC1237CC50E008150F6 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		62D6DCC8237CCF81008150F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		62D6DCCA237CD051008150F6 /* AccountRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRoute.swift; sourceTree = "<group>"; };
+		62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewController.swift; sourceTree = "<group>"; };
+		62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +71,7 @@
 				62D6DCC0237CC4FC008150F6 /* Models */,
 				62D6DCC4237CC521008150F6 /* Model Controllers */,
 				62D6DCC7237CCF56008150F6 /* Helpers + Extensions */,
-				62D6DCBD237CC4BE008150F6 /* Storyboards */,
+				62D6DCCF237CDDC6008150F6 /* Views */,
 				62D6DCBC237CC4A8008150F6 /* Resources */,
 			);
 			path = accountStatus;
@@ -114,6 +120,33 @@
 				62D6DCCA237CD051008150F6 /* AccountRoute.swift */,
 			);
 			path = "Helpers + Extensions";
+			sourceTree = "<group>";
+		};
+		62D6DCCE237CDDB0008150F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCCC237CDDA4008150F6 /* AccountTableViewController.swift */,
+				62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62D6DCCF237CDDC6008150F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCCE237CDDB0008150F6 /* ViewControllers */,
+				62D6DCD2237CE150008150F6 /* Custom Views */,
+				62D6DCBD237CC4BE008150F6 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62D6DCD2237CE150008150F6 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +222,12 @@
 			files = (
 				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
+				62D6DCCD237CDDA4008150F6 /* AccountTableViewController.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,
+				62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */,
 				62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */,
+				62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */,
 				62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,7 +374,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8C27D6HU3;
-				INFOPLIST_FILE = accountStatus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/accountStatus/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +392,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8C27D6HU3;
-				INFOPLIST_FILE = accountStatus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/accountStatus/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

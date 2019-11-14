@@ -17,6 +17,7 @@ struct NetworkService {
                 completion(nil, error)
             }
             guard let unwrappedData = data else {
+                print("Data is nil in \(#function)")
                 completion(nil, nil)
                 return
             }

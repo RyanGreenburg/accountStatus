@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account List View Controller-->
         <scene sceneID="bQr-9e-PFX">
             <objects>
-                <viewController id="pAl-1a-uZ4" sceneMemberID="viewController">
+                <viewController id="pAl-1a-uZ4" customClass="AccountListViewController" customModule="accountStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LKA-i6-5Fh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5eo-lK-dCZ">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="accountCell" id="5eo-lK-dCZ" customClass="AccountCollectionViewCell" customModule="accountStatus" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0yc-dF-4vk">
@@ -70,6 +70,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="142"/>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="wne-yH-0qf" id="Rjs-Xw-SdE"/>
+                                            <outlet property="nameLabel" destination="Ip4-wl-Faa" id="uM3-Io-sBM"/>
+                                            <outlet property="returnOnInvestmentLabel" destination="B30-bi-PLP" id="L1Z-HQ-Je1"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -84,10 +89,13 @@
                         <viewLayoutGuide key="safeArea" id="Vgq-eh-mda"/>
                     </view>
                     <navigationItem key="navigationItem" id="kxK-DT-QxI"/>
+                    <connections>
+                        <outlet property="accountCollectionView" destination="oYl-RS-czg" id="qPq-UZ-FOp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i48-Ah-9k1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086.9565217391305" y="140.625"/>
+            <point key="canvasLocation" x="1016" y="141"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3rn-gn-cj4">
@@ -100,12 +108,27 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pAl-1a-uZ4" kind="relationship" relationship="rootViewController" id="AGF-Lv-cQF"/>
+                        <segue destination="pAl-1a-uZ4" kind="relationship" relationship="rootViewController" id="g5j-hV-zq7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8O-4t-Lva" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="176.81159420289856" y="140.625"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BCN-7V-QIB">
+            <objects>
+                <viewController id="eWA-Pk-9y1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1rT-DH-daO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ize-3w-DXh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gH8-76-RHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2001" y="-196"/>
         </scene>
     </scenes>
 </document>

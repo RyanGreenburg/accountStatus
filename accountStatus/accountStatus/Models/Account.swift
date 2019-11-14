@@ -28,3 +28,19 @@ struct Account : Decodable {
     /// Int value of the id key of the JSON
     let id: Int
 }
+
+// MARK: - Hashable
+extension Account: Hashable {
+    func hash(into hasher: inout Hasher) {
+        return hasher.combine(id)
+    }
+    static func == (lhs: Account, rhs: Account) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
+
+// MARK: - Return On Investment Status
+enum ROISection {
+    case positive
+    case negative
+}
