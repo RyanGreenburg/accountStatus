@@ -9,9 +9,15 @@
 import Foundation
 
 struct AccountController {
-    
-    //let accountCache = NSCache<String, Account>
-    
+    /**
+     Fetches account information for the provided route
+     
+     - Parameters:
+        - route: The url route for the URL dataTask
+        - completion: Compeltion block
+        - accounts: Optional array of accounts returned from the dataTask
+        - error: Optional Error that was thrown from the dataTask
+     */
     static func fetchAccountInfo(for route: AccountRoute, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
         
         guard let url = route.fullUrl else {
@@ -40,6 +46,15 @@ struct AccountController {
         }
     }
     
+    /**
+     Decodes date into Account objects
+     
+     - Parameters:
+        - data: The data to decode
+     
+     - Returns:
+        An optional array of decoded accounts.
+     */
     private static func decodeAccounts(from data: Data) -> [Account]? {
         do {
             let decoder = JSONDecoder()

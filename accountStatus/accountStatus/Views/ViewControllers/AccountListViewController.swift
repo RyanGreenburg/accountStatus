@@ -22,10 +22,11 @@ class AccountListViewController: UIViewController {
     private var accounts: [Account] = [] {
         didSet {
             self.updateCollectionView(animated: true)
-            self.findTotal()
+            self.findAccountsTotal()
         }
     }
     private var dataSource: UICollectionViewDiffableDataSource<ROISection, Account>?
+    private var refreshControl = UIRefreshControl()
     // MARK: - Outlets
     @IBOutlet weak var accountCollectionView: UICollectionView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
@@ -36,11 +37,12 @@ class AccountListViewController: UIViewController {
         super.viewDidLoad()
         self.title = "My Accounts"
         navigationController?.navigationBar.prefersLargeTitles = true
-        setViewsForDeviceType()
         fetchAllAccounts()
+        setViewsForDeviceType()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
         layoutCollectionView()
     }
     
@@ -53,10 +55,23 @@ class AccountListViewController: UIViewController {
             totalBalanceLabel.isHidden = true
             totalsStackView.isHidden = true
         }
+        setRefreshControl()
         configureCollectionView()
     }
     
-    func findTotal() {
+    func setRefreshControl() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(fetchAllAccounts), for: .valueChanged)
+        accountCollectionView.addSubview(refreshControl)
+    }
+    
+    func endRefreshing() {
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    func findAccountsTotal() {
         DispatchQueue.main.async {
             let amounts = self.accounts.map({ $0.amount })
             let total = amounts.reduce(Double(), +)
@@ -77,7 +92,7 @@ class AccountListViewController: UIViewController {
         accountCollectionView.layoutIfNeeded()
     }
     
-    func fetchAllAccounts() {
+    @objc func fetchAllAccounts() {
         AccountController.fetchAccountInfo(for: .allAccounts) { (foundAccounts, error) in
             if let error = error {
                 self.presentErrorAllert(for: error)
@@ -86,6 +101,11 @@ class AccountListViewController: UIViewController {
             if let foundAccounts = foundAccounts {
                 self.accounts = foundAccounts
             }
+            
+            if foundAccounts == nil && error == nil {
+                self.presentParseAlert()
+            }
+            self.endRefreshing()
         }
     }
     

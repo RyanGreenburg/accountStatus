@@ -18,4 +18,13 @@ extension UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+    func presentParseAlert() {
+        let alert = UIAlertController(title: "There was an error fetching your account information", message: "Pull down to refresh and try again", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel)
+        alert.addAction(action)
+        DispatchQueue.main.async {
+            self.present(alert, animated: true)
+        }
+    }
 }
