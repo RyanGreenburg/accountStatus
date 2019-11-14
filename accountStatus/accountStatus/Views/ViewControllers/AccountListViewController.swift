@@ -22,19 +22,23 @@ class AccountListViewController: UIViewController {
     private var accounts: [Account] = [] {
         didSet {
             self.updateCollectionView(animated: true)
+            self.findTotal()
         }
     }
     private var dataSource: UICollectionViewDiffableDataSource<ROISection, Account>?
     // MARK: - Outlets
     @IBOutlet weak var accountCollectionView: UICollectionView!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
+    @IBOutlet weak var accountsTitleLabel: UILabel!
+    @IBOutlet weak var totalsStackView: UIStackView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Accounts"
         navigationController?.navigationBar.prefersLargeTitles = true
+        setViewsForDeviceType()
         fetchAllAccounts()
-        configureCollectionView()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -42,11 +46,32 @@ class AccountListViewController: UIViewController {
     }
     
     // MARK: - Class Methods
+    func setViewsForDeviceType() {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            totalBalanceLabel.isHidden = false
+            accountsTitleLabel.isHidden = false
+            totalsStackView.isHidden = false
+        } else {
+            totalBalanceLabel.isHidden = true
+            accountsTitleLabel.isHidden = true
+            totalsStackView.isHidden = true
+        }
+        configureCollectionView()
+    }
+    
+    func findTotal() {
+        DispatchQueue.main.async {
+            let amounts = self.accounts.map({ $0.amount })
+            let total = amounts.reduce(Double(), +)
+            self.totalBalanceLabel.text = total.currencyValue()
+        }
+    }
+    
     func configureCollectionView() {
         accountCollectionView.delegate = self
         layoutCollectionView()
         setUpDataSource()
-        updateCollectionView(animated: true)
+//        updateCollectionView(animated: true)
     }
     
     func layoutCollectionView() {

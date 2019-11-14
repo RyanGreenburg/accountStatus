@@ -24,6 +24,5 @@ struct NetworkService {
             completion(unwrappedData, nil)
         }
         dataTask.resume()
-        
     }
 }

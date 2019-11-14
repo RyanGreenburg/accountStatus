@@ -38,10 +38,20 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02q-eE-2HJ">
+                                <rect key="frame" x="290" y="454" width="82.5" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="eWA-Pk-9y1" eventType="touchUpInside" id="ff9-2D-Zhh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="top" secondItem="aqS-nr-kJq" secondAttribute="bottom" constant="7.5" id="6Px-KV-Iju"/>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="width" secondItem="aqS-nr-kJq" secondAttribute="width" multiplier="0.25" id="8cW-L2-0ax"/>
                             <constraint firstItem="aqS-nr-kJq" firstAttribute="width" secondItem="Ize-3w-DXh" secondAttribute="width" multiplier="0.8" id="D8e-C7-iaH"/>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="trailing" secondItem="aqS-nr-kJq" secondAttribute="trailing" id="Lvu-O5-fWj"/>
                             <constraint firstItem="aqS-nr-kJq" firstAttribute="centerX" secondItem="Ize-3w-DXh" secondAttribute="centerX" id="eub-3I-JyA"/>
                             <constraint firstItem="aqS-nr-kJq" firstAttribute="centerY" secondItem="Ize-3w-DXh" secondAttribute="centerY" multiplier="0.9" id="jmR-Zx-uFX"/>
                         </constraints>

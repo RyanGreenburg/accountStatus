@@ -21,6 +21,9 @@ class AccountDetailViewController: UIViewController {
         updateViews()
     }
     
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     // MARK: - Class Methods
     func updateViews() {
         guard let account = account else { return }
