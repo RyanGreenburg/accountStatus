@@ -11,9 +11,9 @@ import Foundation
 enum AccountRoute {
     /// Static constant containing the base URL for the Accounts API
     static let baseURL = "https://glacial-bayou-77287.herokuapp.com/"
-    /// 
+    /// Case that will build URL for all accounts
     case allAccounts
-    
+    /// Computed string value of pathExtensions for needed endpoints
     var path: String {
         switch self {
         case .allAccounts:
@@ -21,7 +21,7 @@ enum AccountRoute {
         }
     }
     
-        
+    /// Computed URL that builds a url for the given case
     var fullUrl: URL? {
         guard let url = URL(string: AccountRoute.baseURL)?.appendingPathComponent(path) else { return nil }
         

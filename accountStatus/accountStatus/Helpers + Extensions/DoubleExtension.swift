@@ -9,6 +9,7 @@
 import Foundation
 
 extension Double {
+    /// Returns a string formatted for currency
     func currencyValue() -> String {
         let currencyFormatter = NumberFormatter()
         currencyFormatter.usesGroupingSeparator = true
@@ -19,6 +20,7 @@ extension Double {
         return currencyFormatter.string(from: numberValue) ?? String(self)
     }
     
+    /// Returns a string with the double and an added percent sign
     func percentage() -> String {
         return String("\(self)%")
     }
