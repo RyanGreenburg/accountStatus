@@ -29,7 +29,6 @@ class AccountListViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var accountCollectionView: UICollectionView!
     @IBOutlet weak var totalBalanceLabel: UILabel!
-    @IBOutlet weak var accountsTitleLabel: UILabel!
     @IBOutlet weak var totalsStackView: UIStackView!
     
     // MARK: - Lifecycle
@@ -49,11 +48,9 @@ class AccountListViewController: UIViewController {
     func setViewsForDeviceType() {
         if UIDevice.current.userInterfaceIdiom == .pad {
             totalBalanceLabel.isHidden = false
-            accountsTitleLabel.isHidden = false
             totalsStackView.isHidden = false
         } else {
             totalBalanceLabel.isHidden = true
-            accountsTitleLabel.isHidden = true
             totalsStackView.isHidden = true
         }
         configureCollectionView()
@@ -63,7 +60,7 @@ class AccountListViewController: UIViewController {
         DispatchQueue.main.async {
             let amounts = self.accounts.map({ $0.amount })
             let total = amounts.reduce(Double(), +)
-            self.totalBalanceLabel.text = total.currencyValue()
+            self.totalBalanceLabel.text = "Accounts Total:\n\(total.currencyValue())"
         }
     }
     
@@ -71,7 +68,6 @@ class AccountListViewController: UIViewController {
         accountCollectionView.delegate = self
         layoutCollectionView()
         setUpDataSource()
-//        updateCollectionView(animated: true)
     }
     
     func layoutCollectionView() {

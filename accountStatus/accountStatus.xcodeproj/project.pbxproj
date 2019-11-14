@@ -23,6 +23,9 @@
 		62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */; };
 		62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */; };
 		62D6DCE1237DC93D008150F6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */; };
+		62D6DCE3237DD0F3008150F6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */; };
+		62D6DCE5237DD351008150F6 /* DarkTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */; };
+		62D6DCE7237DD3ED008150F6 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextLabel.swift; sourceTree = "<group>"; };
+		62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,7 @@
 				62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */,
 				62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */,
 				62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */,
+				62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */,
+				62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */,
+				62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -235,14 +244,17 @@
 			files = (
 				62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */,
 				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
+				62D6DCE7237DD3ED008150F6 /* FloatingButton.swift in Sources */,
 				62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */,
 				62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
+				62D6DCE3237DD0F3008150F6 /* UIColorExtension.swift in Sources */,
 				62D6DCE1237DC93D008150F6 /* UIViewExtension.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,
 				62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */,
 				62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */,
+				62D6DCE5237DD351008150F6 /* DarkTextLabel.swift in Sources */,
 				62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */,
 				62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */,
 			);

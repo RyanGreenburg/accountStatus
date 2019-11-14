@@ -12,13 +12,16 @@ class AccountDetailViewController: UIViewController {
     
     var account: Account?
 
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var amoutLabel: UILabel!
-    @IBOutlet weak var returnOnInvestmentLabel: UILabel!
+    @IBOutlet weak var nameLabel: DarkTextLabel!
+    @IBOutlet weak var amoutLabel: DarkTextLabel!
+    @IBOutlet weak var returnOnInvestmentLabel: DarkTextLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
+        nameLabel.textColor = .darkText
+        amoutLabel.textColor = .darkText
+        returnOnInvestmentLabel.textColor = .darkText
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
@@ -27,8 +30,7 @@ class AccountDetailViewController: UIViewController {
     // MARK: - Class Methods
     func updateViews() {
         guard let account = account else { return }
-        self.view.backgroundColor = account.returnOnInvestment >= 0 ? .systemGreen : .systemRed
-        self.view.backgroundColor?.withAlphaComponent(90)
+        self.view.backgroundColor = account.returnOnInvestment >= 0 ? .customGreen : .customRed
         nameLabel.text = account.name
         amoutLabel.text = account.amount.currencyValue()
         returnOnInvestmentLabel.text = account.returnOnInvestment.percentage()

@@ -19,13 +19,13 @@ class AccountCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
-    @IBOutlet weak var returnOnInvestmentLabel: UILabel!
+    @IBOutlet weak var returnOnInvestmentLabel: DarkTextLabel!
     
     func updateCell(with account: Account) {
         self.backgroundColor = .secondarySystemBackground
         nameLabel.text = account.name
         amountLabel.text = account.amount.currencyValue()
         returnOnInvestmentLabel.text = account.returnOnInvestment.percentage()
-        returnOnInvestmentLabel.backgroundColor = account.returnOnInvestment >= 0 ? .systemGreen : .systemRed
+        returnOnInvestmentLabel.backgroundColor = account.returnOnInvestment >= 0 ? .customGreen : .customRed
     }
 }

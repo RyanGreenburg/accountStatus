@@ -16,21 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Y3R-xz-eu4">
-                                <rect key="frame" x="0.0" y="-0.5" width="1024" height="1346.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y3R-xz-eu4">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="1296"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g97-hU-oMf">
-                                        <rect key="frame" x="0.0" y="0.0" width="487" height="1346.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g97-hU-oMf">
+                                        <rect key="frame" x="0.0" y="0.0" width="338" height="1296"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accounts Total:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Do-g0-lim">
-                                                <rect key="frame" x="0.0" y="663" width="338" height="20.5"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcy-6L-Xq3">
-                                                <rect key="frame" x="348" y="663" width="139" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcy-6L-Xq3">
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="1296"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -38,7 +31,7 @@
                                         </subviews>
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oYl-RS-czg">
-                                        <rect key="frame" x="537" y="0.0" width="487" height="1346.5"/>
+                                        <rect key="frame" x="346" y="0.0" width="678" height="1296"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hD0-Ma-o1M">
                                             <size key="itemSize" width="414" height="142"/>
@@ -48,7 +41,7 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="accountCell" id="5eo-lK-dCZ" customClass="AccountCollectionViewCell" customModule="accountStatus" customModuleProvider="target">
-                                                <rect key="frame" x="36.5" y="0.0" width="414" height="142"/>
+                                                <rect key="frame" x="132" y="0.0" width="414" height="142"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0yc-dF-4vk">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
@@ -74,7 +67,7 @@
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="roi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B30-bi-PLP">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="roi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B30-bi-PLP" customClass="DarkTextLabel" customModule="accountStatus" customModuleProvider="target">
                                                                     <rect key="frame" x="272" y="0.0" width="126" height="126"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="B30-bi-PLP" secondAttribute="height" multiplier="1:1" id="gee-kD-t9U"/>
@@ -107,17 +100,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Vgq-eh-mda" firstAttribute="bottom" secondItem="Y3R-xz-eu4" secondAttribute="bottom" id="500-Fl-E6n"/>
-                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="trailing" secondItem="Vgq-eh-mda" secondAttribute="trailing" id="PRA-Te-UFe"/>
-                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="top" secondItem="LKA-i6-5Fh" secondAttribute="top" id="ca9-a3-y9N"/>
-                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="leading" secondItem="Vgq-eh-mda" secondAttribute="leading" id="gyJ-0p-Fdz"/>
+                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="centerY" secondItem="Vgq-eh-mda" secondAttribute="centerY" id="5rr-XK-dZJ"/>
+                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="centerX" secondItem="Vgq-eh-mda" secondAttribute="centerX" id="Iz3-bs-MSh"/>
+                            <constraint firstItem="g97-hU-oMf" firstAttribute="width" secondItem="Vgq-eh-mda" secondAttribute="width" multiplier="0.33" id="Pub-6r-8TJ"/>
+                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="height" secondItem="Vgq-eh-mda" secondAttribute="height" id="bg8-3L-rkC"/>
+                            <constraint firstItem="Y3R-xz-eu4" firstAttribute="width" secondItem="Vgq-eh-mda" secondAttribute="width" id="mRL-ph-gAF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vgq-eh-mda"/>
                     </view>
                     <navigationItem key="navigationItem" id="kxK-DT-QxI"/>
                     <connections>
                         <outlet property="accountCollectionView" destination="oYl-RS-czg" id="qPq-UZ-FOp"/>
-                        <outlet property="accountsTitleLabel" destination="0Do-g0-lim" id="Y6P-Yw-RaN"/>
                         <outlet property="totalBalanceLabel" destination="kcy-6L-Xq3" id="69a-Zq-A2D"/>
                         <outlet property="totalsStackView" destination="g97-hU-oMf" id="76y-DP-V8p"/>
                     </connections>

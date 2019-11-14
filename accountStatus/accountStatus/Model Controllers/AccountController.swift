@@ -33,6 +33,7 @@ struct AccountController {
             if let decodedAccounts = self.decodeAccounts(from: data) {
                 print("Accounts decoded successfully")
                 completion(decodedAccounts, nil)
+                return
             }
             print("Unable to decode accounts")
             completion(nil, nil)
