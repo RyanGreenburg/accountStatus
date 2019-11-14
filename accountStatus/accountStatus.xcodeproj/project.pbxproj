@@ -20,6 +20,8 @@
 		62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */; };
 		62D6DCD7237CFAC0008150F6 /* AccountDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */; };
 		62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */; };
+		62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */; };
+		62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		62D6DCD6237CFAC0008150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = accountStatus/Views/Storyboards/Base.lproj/AccountDetail.storyboard; sourceTree = "<group>"; };
 		62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 			children = (
 				62D6DCC8237CCF81008150F6 /* NetworkService.swift */,
 				62D6DCCA237CD051008150F6 /* AccountRoute.swift */,
+				62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */,
+				62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */,
 			);
 			path = "Helpers + Extensions";
 			sourceTree = "<group>";
@@ -226,6 +232,8 @@
 			files = (
 				62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */,
 				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
+				62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */,
+				62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,

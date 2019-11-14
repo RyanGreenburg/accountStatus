@@ -15,9 +15,9 @@ class AccountCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var returnOnInvestmentLabel: UILabel!
     
     func updateCell(with account: Account) {
-        self.backgroundColor = account.returnOnInvestment >= 0 ? UIColor.green : UIColor.red
+        self.backgroundColor = .secondarySystemBackground
         nameLabel.text = account.name
-        amountLabel.text = "\(account.amount)"
-        returnOnInvestmentLabel.text = "\(account.returnOnInvestment)"
+        amountLabel.text = account.amount.currencyValue()
+        returnOnInvestmentLabel.text = account.returnOnInvestment.percentage()
     }
 }

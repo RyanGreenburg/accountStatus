@@ -12,21 +12,22 @@ class AccountDetailViewController: UIViewController {
     
     var account: Account?
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var amoutLabel: UILabel!
+    @IBOutlet weak var returnOnInvestmentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(account?.name)
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Class Methods
+    func updateViews() {
+        guard let account = account else { return }
+        self.view.backgroundColor = account.returnOnInvestment >= 0 ? .systemGreen : .systemRed
+        self.view.backgroundColor?.withAlphaComponent(90)
+        nameLabel.text = account.name
+        amoutLabel.text = account.amount.currencyValue()
+        returnOnInvestmentLabel.text = account.returnOnInvestment.percentage()
     }
-    */
-
 }

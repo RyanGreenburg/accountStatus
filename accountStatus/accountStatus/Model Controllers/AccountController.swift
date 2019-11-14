@@ -10,6 +10,8 @@ import Foundation
 
 struct AccountController {
     
+    //let accountCache = NSCache<String, Account>
+    
     static func fetchAccountInfo(for route: AccountRoute, completion: @escaping (_ accounts: [Account]?, _ error: Error?) -> Void) {
         
         guard let url = route.fullUrl else {

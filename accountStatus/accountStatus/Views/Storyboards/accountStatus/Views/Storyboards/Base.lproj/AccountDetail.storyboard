@@ -14,9 +14,44 @@
                     <view key="view" contentMode="scaleToFill" id="1rT-DH-daO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-nr-kJq">
+                                <rect key="frame" x="41.5" y="369" width="331" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-QV-J2g" userLabel="name">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0U-1b-NNx" userLabel="amount">
+                                        <rect key="frame" x="0.0" y="28.5" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-Zo-JdH" userLabel="roi">
+                                        <rect key="frame" x="0.0" y="57" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="width" secondItem="Ize-3w-DXh" secondAttribute="width" multiplier="0.8" id="D8e-C7-iaH"/>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="centerX" secondItem="Ize-3w-DXh" secondAttribute="centerX" id="eub-3I-JyA"/>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="centerY" secondItem="Ize-3w-DXh" secondAttribute="centerY" multiplier="0.9" id="jmR-Zx-uFX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ize-3w-DXh"/>
                     </view>
+                    <connections>
+                        <outlet property="amoutLabel" destination="U0U-1b-NNx" id="m3o-Dg-8mW"/>
+                        <outlet property="nameLabel" destination="W5O-QV-J2g" id="btb-b5-y0c"/>
+                        <outlet property="returnOnInvestmentLabel" destination="hXQ-Zo-JdH" id="aMf-xe-bDQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gH8-76-RHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

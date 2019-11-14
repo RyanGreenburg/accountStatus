@@ -10,6 +10,15 @@ import UIKit
 
 class AccountListViewController: UIViewController {
     // MARK: - Class Properties
+    private var cellHeight: CGFloat {
+        return view.frame.height >= 500 ? (self.view.frame.height / 6) : (self.view.frame.height / 3)
+    }
+    private var horizontalBuffer: CGFloat {
+        return self.view.frame.width / 20
+    }
+    private var verticalBuffer: CGFloat {
+        return self.view.frame.height / 50
+    }
     private var accounts: [Account] = [] {
         didSet {
             self.updateCollectionView(animated: true)
@@ -22,22 +31,35 @@ class AccountListViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "My Accounts"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        fetchAllAccounts()
         configureCollectionView()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        layoutCollectionView()
     }
     
     // MARK: - Class Methods
     func configureCollectionView() {
         accountCollectionView.delegate = self
-        let layout = createLayout()
-        accountCollectionView.setCollectionViewLayout(layout, animated: false)
-        fetchAllAccounts()
+        layoutCollectionView()
         setUpDataSource()
-        updateCollectionView(animated: false)
+        updateCollectionView(animated: true)
     }
+    
+    func layoutCollectionView() {
+        let section = createSectionLayout()
+        let layout = createLayout(with: section)
+        accountCollectionView.setCollectionViewLayout(layout, animated: false)
+        accountCollectionView.layoutIfNeeded()
+    }
+    
     func fetchAllAccounts() {
         AccountController.fetchAccountInfo(for: .allAccounts) { (foundAccounts, error) in
             if let error = error {
-                print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+                self.presentErrorAllert(for: error)
             }
             
             if let foundAccounts = foundAccounts {
@@ -77,12 +99,11 @@ extension AccountListViewController {
         snapshot.appendItems(self.accounts.filter({ $0.returnOnInvestment >= 0 }), toSection: .positive)
         snapshot.appendItems(self.accounts.filter({ $0.returnOnInvestment < 0 }), toSection: .negative)
         
-        
         dataSource?.apply(snapshot)
     }
     
-    func createLayout() -> UICollectionViewLayout {
-        let section = createSectionLayout()
+    func createLayout(with sectionLayout: NSCollectionLayoutSection) -> UICollectionViewLayout {
+        let section = sectionLayout
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.interSectionSpacing = 20
         let layout = UICollectionViewCompositionalLayout(section: section, configuration: configuration)
@@ -90,17 +111,18 @@ extension AccountListViewController {
     }
     
     func createSectionLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(self.view.frame.height / 10))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(1))
         
         let layoutItem = NSCollectionLayoutItem(layoutSize: itemSize)
+        layoutItem.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: horizontalBuffer, bottom: 0, trailing: -horizontalBuffer)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(cellHeight))
         
         let layoutGroup = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [layoutItem])
         
-        
         let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-        layoutSection.interGroupSpacing = self.view.frame.height / 50
+        layoutSection.interGroupSpacing = verticalBuffer
+        
         return layoutSection
     }
 }
