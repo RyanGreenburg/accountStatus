@@ -14,6 +14,18 @@
 		62D6DCB5237CC488008150F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D6DCB3237CC488008150F6 /* LaunchScreen.storyboard */; };
 		62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCBE237CC4E6008150F6 /* Account.swift */; };
 		62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC1237CC50E008150F6 /* AccountController.swift */; };
+		62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC8237CCF81008150F6 /* NetworkService.swift */; };
+		62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCA237CD051008150F6 /* AccountRoute.swift */; };
+		62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */; };
+		62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */; };
+		62D6DCD7237CFAC0008150F6 /* AccountDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */; };
+		62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */; };
+		62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */; };
+		62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */; };
+		62D6DCE1237DC93D008150F6 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */; };
+		62D6DCE3237DD0F3008150F6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */; };
+		62D6DCE5237DD351008150F6 /* DarkTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */; };
+		62D6DCE7237DD3ED008150F6 /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,18 @@
 		62D6DCB6237CC488008150F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D6DCBE237CC4E6008150F6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		62D6DCC1237CC50E008150F6 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		62D6DCC8237CCF81008150F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		62D6DCCA237CD051008150F6 /* AccountRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRoute.swift; sourceTree = "<group>"; };
+		62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
+		62D6DCD6237CFAC0008150F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = accountStatus/Views/Storyboards/Base.lproj/AccountDetail.storyboard; sourceTree = "<group>"; };
+		62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetailViewController.swift; sourceTree = "<group>"; };
+		62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkTextLabel.swift; sourceTree = "<group>"; };
+		62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +84,8 @@
 			children = (
 				62D6DCC0237CC4FC008150F6 /* Models */,
 				62D6DCC4237CC521008150F6 /* Model Controllers */,
-				62D6DCBD237CC4BE008150F6 /* Storyboards */,
+				62D6DCC7237CCF56008150F6 /* Helpers + Extensions */,
+				62D6DCCF237CDDC6008150F6 /* Views */,
 				62D6DCBC237CC4A8008150F6 /* Resources */,
 			);
 			path = accountStatus;
@@ -82,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				62D6DCAE237CC487008150F6 /* Main.storyboard */,
+				62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -100,6 +126,48 @@
 				62D6DCC1237CC50E008150F6 /* AccountController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		62D6DCC7237CCF56008150F6 /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCC8237CCF81008150F6 /* NetworkService.swift */,
+				62D6DCCA237CD051008150F6 /* AccountRoute.swift */,
+				62D6DCDA237D0CFE008150F6 /* UIViewControllerExtension.swift */,
+				62D6DCDC237D0E00008150F6 /* DoubleExtension.swift */,
+				62D6DCE0237DC93D008150F6 /* UIViewExtension.swift */,
+				62D6DCE2237DD0F3008150F6 /* UIColorExtension.swift */,
+			);
+			path = "Helpers + Extensions";
+			sourceTree = "<group>";
+		};
+		62D6DCCE237CDDB0008150F6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCD3237CE1D2008150F6 /* AccountListViewController.swift */,
+				62D6DCD8237CFAFF008150F6 /* AccountDetailViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62D6DCCF237CDDC6008150F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCCE237CDDB0008150F6 /* ViewControllers */,
+				62D6DCD2237CE150008150F6 /* Custom Views */,
+				62D6DCBD237CC4BE008150F6 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62D6DCD2237CE150008150F6 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCD0237CE14C008150F6 /* AccountCollectionViewCell.swift */,
+				62D6DCE4237DD351008150F6 /* DarkTextLabel.swift */,
+				62D6DCE6237DD3ED008150F6 /* FloatingButton.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +231,7 @@
 				62D6DCB5237CC488008150F6 /* LaunchScreen.storyboard in Resources */,
 				62D6DCB2237CC488008150F6 /* Assets.xcassets in Resources */,
 				62D6DCB0237CC487008150F6 /* Main.storyboard in Resources */,
+				62D6DCD7237CFAC0008150F6 /* AccountDetail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,10 +242,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D6DCD9237CFAFF008150F6 /* AccountDetailViewController.swift in Sources */,
+				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
+				62D6DCE7237DD3ED008150F6 /* FloatingButton.swift in Sources */,
+				62D6DCDB237D0CFE008150F6 /* UIViewControllerExtension.swift in Sources */,
+				62D6DCDD237D0E00008150F6 /* DoubleExtension.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
+				62D6DCE3237DD0F3008150F6 /* UIColorExtension.swift in Sources */,
+				62D6DCE1237DC93D008150F6 /* UIViewExtension.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,
+				62D6DCD4237CE1D2008150F6 /* AccountListViewController.swift in Sources */,
 				62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */,
+				62D6DCE5237DD351008150F6 /* DarkTextLabel.swift in Sources */,
+				62D6DCD1237CE14C008150F6 /* AccountCollectionViewCell.swift in Sources */,
+				62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +277,14 @@
 				62D6DCB4237CC488008150F6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		62D6DCD5237CFAC0008150F6 /* AccountDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62D6DCD6237CFAC0008150F6 /* Base */,
+			);
+			name = AccountDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -322,7 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8C27D6HU3;
-				INFOPLIST_FILE = accountStatus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/accountStatus/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -340,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H8C27D6HU3;
-				INFOPLIST_FILE = accountStatus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/accountStatus/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

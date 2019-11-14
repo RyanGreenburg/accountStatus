@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eWA-Pk-9y1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account Detail View Controller-->
+        <scene sceneID="BCN-7V-QIB">
+            <objects>
+                <viewController id="eWA-Pk-9y1" customClass="AccountDetailViewController" customModule="accountStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1rT-DH-daO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aqS-nr-kJq">
+                                <rect key="frame" x="41.5" y="369" width="331" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-QV-J2g" userLabel="name" customClass="DarkTextLabel" customModule="accountStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0U-1b-NNx" userLabel="amount" customClass="DarkTextLabel" customModule="accountStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28.5" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-Zo-JdH" userLabel="roi" customClass="DarkTextLabel" customModule="accountStatus" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="57" width="331" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02q-eE-2HJ" customClass="FloatingButton" customModule="accountStatus" customModuleProvider="target">
+                                <rect key="frame" x="290" y="454" width="82.5" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="eWA-Pk-9y1" eventType="touchUpInside" id="ff9-2D-Zhh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="top" secondItem="aqS-nr-kJq" secondAttribute="bottom" constant="7.5" id="6Px-KV-Iju"/>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="width" secondItem="aqS-nr-kJq" secondAttribute="width" multiplier="0.25" id="8cW-L2-0ax"/>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="width" secondItem="Ize-3w-DXh" secondAttribute="width" multiplier="0.8" id="D8e-C7-iaH"/>
+                            <constraint firstItem="02q-eE-2HJ" firstAttribute="trailing" secondItem="aqS-nr-kJq" secondAttribute="trailing" id="Lvu-O5-fWj"/>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="centerX" secondItem="Ize-3w-DXh" secondAttribute="centerX" id="eub-3I-JyA"/>
+                            <constraint firstItem="aqS-nr-kJq" firstAttribute="centerY" secondItem="Ize-3w-DXh" secondAttribute="centerY" multiplier="0.9" id="jmR-Zx-uFX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ize-3w-DXh"/>
+                    </view>
+                    <connections>
+                        <outlet property="amoutLabel" destination="U0U-1b-NNx" id="m3o-Dg-8mW"/>
+                        <outlet property="nameLabel" destination="W5O-QV-J2g" id="btb-b5-y0c"/>
+                        <outlet property="returnOnInvestmentLabel" destination="hXQ-Zo-JdH" id="aMf-xe-bDQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gH8-76-RHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1835" y="141"/>
+        </scene>
+    </scenes>
+</document>
