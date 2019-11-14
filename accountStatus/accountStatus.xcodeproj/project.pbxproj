@@ -14,6 +14,8 @@
 		62D6DCB5237CC488008150F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D6DCB3237CC488008150F6 /* LaunchScreen.storyboard */; };
 		62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCBE237CC4E6008150F6 /* Account.swift */; };
 		62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC1237CC50E008150F6 /* AccountController.swift */; };
+		62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCC8237CCF81008150F6 /* NetworkService.swift */; };
+		62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D6DCCA237CD051008150F6 /* AccountRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		62D6DCB6237CC488008150F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62D6DCBE237CC4E6008150F6 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		62D6DCC1237CC50E008150F6 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		62D6DCC8237CCF81008150F6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		62D6DCCA237CD051008150F6 /* AccountRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			children = (
 				62D6DCC0237CC4FC008150F6 /* Models */,
 				62D6DCC4237CC521008150F6 /* Model Controllers */,
+				62D6DCC7237CCF56008150F6 /* Helpers + Extensions */,
 				62D6DCBD237CC4BE008150F6 /* Storyboards */,
 				62D6DCBC237CC4A8008150F6 /* Resources */,
 			);
@@ -100,6 +105,15 @@
 				62D6DCC1237CC50E008150F6 /* AccountController.swift */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		62D6DCC7237CCF56008150F6 /* Helpers + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62D6DCC8237CCF81008150F6 /* NetworkService.swift */,
+				62D6DCCA237CD051008150F6 /* AccountRoute.swift */,
+			);
+			path = "Helpers + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D6DCC9237CCF81008150F6 /* NetworkService.swift in Sources */,
 				62D6DCA9237CC487008150F6 /* AppDelegate.swift in Sources */,
 				62D6DCAB237CC487008150F6 /* SceneDelegate.swift in Sources */,
 				62D6DCBF237CC4E6008150F6 /* Account.swift in Sources */,
 				62D6DCC2237CC50E008150F6 /* AccountController.swift in Sources */,
+				62D6DCCB237CD051008150F6 /* AccountRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
